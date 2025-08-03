@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Form submit event listener
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent actual form submission
+        event.preventDefault(); // Prevent form from submitting
 
         // Retrieve input values and trim whitespace
         const username = document.getElementById("username").value.trim();
@@ -39,12 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
-            feedbackDiv.style.color = "#28a745";
-            feedbackDiv.style.backgroundColor = "#d4edda"; // Success background
+            feedbackDiv.style.color = "#28a745"; // Green text for success
         } else {
             feedbackDiv.innerHTML = messages.join("<br>");
-            feedbackDiv.style.color = "#d8000c";
-            feedbackDiv.style.backgroundColor = "#ffbaba"; // Error background
+            feedbackDiv.style.color = "#dc3545"; // Red text for errors
         }
     });
 });
